@@ -40,4 +40,4 @@ appendix:
 
 ```
 
-**Note**: Please keep in mind do not change the directory construct！！
+**Note**: Please keep in mind do not change the directory construct！！you can specifiy `atlas.metadata.namespace=5k` configure as extra properties in `atlas-application.properties` file,then all the message send from this hive node will come from `5k` cluster.
