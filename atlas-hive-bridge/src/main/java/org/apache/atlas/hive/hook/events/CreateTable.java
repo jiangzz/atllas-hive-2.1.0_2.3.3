@@ -73,7 +73,6 @@ public class CreateTable extends BaseHiveEvent {
         } else {
             table = toTable(((CreateTableEvent) event).getTable());
         }
-
         if (skipTemporaryTable(table)) {
             table = null;
         }

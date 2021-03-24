@@ -351,8 +351,8 @@ public class HiveHook extends AtlasHook implements ExecuteWithHookContext {
             this.dbMaxCacheCount   = dbMaxCacheCount;
             this.tblMaxCacheCount  = tblMaxCacheCount;
             this.cacheExpiryTimeMs = nameCacheRebuildIntervalSeconds <= 0 ? Long.MAX_VALUE : (System.currentTimeMillis() + (nameCacheRebuildIntervalSeconds * 1000));
-            this.knownDatabases    = Collections.synchronizedSet(new HashSet<>());
-            this.knownTables       = Collections.synchronizedSet(new HashSet<>());
+            this.knownDatabases    = Collections.synchronizedSet(new HashSet<String>());
+            this.knownTables       = Collections.synchronizedSet(new HashSet<String>());
         }
 
         public int getCachedDbCount() {

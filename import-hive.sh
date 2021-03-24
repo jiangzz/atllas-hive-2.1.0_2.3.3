@@ -141,9 +141,12 @@ do
     -d) IMPORT_ARGS="$IMPORT_ARGS -d $1"; shift;;
     -t) IMPORT_ARGS="$IMPORT_ARGS -t $1"; shift;;
     -f) IMPORT_ARGS="$IMPORT_ARGS -f $1"; shift;;
+    -ty) IMPORT_ARGS="$IMPORT_ARGS -ty $1"; shift;;
     --database) IMPORT_ARGS="$IMPORT_ARGS --database $1"; shift;;
     --table) IMPORT_ARGS="$IMPORT_ARGS --table $1"; shift;;
     --filename) IMPORT_ARGS="$IMPORT_ARGS --filename $1"; shift;;
+    --type) IMPORT_ARGS="$IMPORT_ARGS --type $1"; shift;;
+    --help) IMPORT_ARGS="$IMPORT_ARGS --help $1"; shift;;
     "") break;;
     *) JVM_ARGS="$JVM_ARGS $option"
   esac
